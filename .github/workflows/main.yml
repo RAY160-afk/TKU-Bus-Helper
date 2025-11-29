@@ -9,7 +9,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Install Xcode project dependencies
         run: |
@@ -25,7 +25,7 @@ jobs:
             -exportOptionsPlist exportOptions.plist
 
       - name: Upload IPA
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: TKU-Bus-Helper-IPA
           path: tkubus_swiftui_project/build/*.ipa
